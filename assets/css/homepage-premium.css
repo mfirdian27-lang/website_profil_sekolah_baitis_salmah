@@ -1,0 +1,313 @@
+/* HOMEPAGE - VIDEO HERO SECTION & PREMIUM STYLING */
+
+/* Hero section with video background */
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--dark);
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(1.1) contrast(1.1);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, calc(100% - 40px));
+  text-align: center;
+  animation: riseUp 0.9s ease both;
+  padding: 4rem 0 6rem;
+  background: transparent;
+  backdrop-filter: none;
+  border: none;
+  box-shadow: none;
+}
+
+.hero-panel {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+  backdrop-filter: none;
+  border: none;
+  box-shadow: none;
+}
+
+.hero-panel::before {
+  content: "";
+  display: block;
+  width: 82px;
+  height: 1px;
+  margin: 0 auto 24px;
+  background: var(--gold);
+}
+
+.hero-kicker {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.hero h1 {
+  max-width: 780px;
+  margin: 0 auto 1.25rem;
+  color: var(--text);
+  font-size: clamp(2.8rem, 6vw, 5.6rem);
+  line-height: 0.98;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.hero-text {
+  max-width: 620px;
+  margin: 0 auto;
+  color: rgba(246, 240, 228, 0.8);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+/* Premium button styling */
+.btn {
+  min-height: 50px;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  padding: 0.95rem 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  color: var(--dark);
+  background: var(--gold);
+  border-color: var(--gold);
+  box-shadow: 0 16px 38px rgba(214, 181, 109, 0.16);
+}
+
+.btn-primary:hover {
+  color: var(--dark);
+  background: #e2c47c;
+  border-color: #e2c47c;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  color: var(--text);
+  border-color: var(--border);
+  background: transparent;
+}
+
+.btn-secondary:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+/* Section styling */
+.section {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 96px 40px;
+  position: relative;
+}
+
+.section-heading {
+  position: relative;
+  max-width: 760px;
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.section-heading::before {
+  content: "";
+  display: block;
+  width: 68px;
+  height: 1px;
+  margin: 0 auto 22px;
+  background: var(--gold);
+}
+
+.section-label,
+.section-tag {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.section-title,
+.section-heading h2 {
+  margin-bottom: 26px;
+  color: var(--text);
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.08;
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* Card styling */
+.feature-card,
+.info-panel {
+  padding: 32px;
+  border: 1px solid var(--border-soft);
+  border-radius: 6px;
+  background: linear-gradient(180deg, rgba(16, 36, 28, 0.98), rgba(14, 29, 23, 0.98));
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
+  transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+.feature-card:hover,
+.info-panel:hover {
+  transform: translateY(-4px);
+  border-color: rgba(214, 181, 109, 0.52);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.42);
+}
+
+.feature-card h3,
+.info-panel h3 {
+  color: var(--text);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card p,
+.info-panel p {
+  color: var(--muted);
+  line-height: 1.82;
+}
+
+.text-link {
+  color: var(--gold);
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Grid layouts */
+.feature-grid,
+.vision-mission-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Logo image fix */
+.logo-image {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 12px 32px rgba(214, 181, 109, 0.16);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero-content {
+    width: min(100% - 32px, 1180px);
+    padding: 3rem 0 6rem;
+    text-align: left;
+  }
+  
+  .hero-panel {
+    text-align: left;
+    padding: 0;
+  }
+  
+  .hero-panel::before {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  
+  .hero h1 {
+    font-size: clamp(2.8rem, 6vw, 5.6rem);
+    line-height: 1.02;
+  }
+  
+  .section {
+    width: min(100% - 24px, 1180px);
+    padding: 64px 20px;
+  }
+  
+  .section-heading {
+    text-align: left;
+  }
+  
+  .section-heading::before {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+/* ==========================================
+   OVERRIDE TYPOGRAPHY REFINEMENTS FOR UX
+   ========================================== */
+/* MERAPIKAN JUDUL SEKSI AGAR KONSISTEN & ELEGANT */
+.profile-page .section-title {
+  font-family: "Cormorant Garamond", serif !important;
+  text-transform: none !important; /* Nonaktifkan paksaan ALL CAPS */
+  font-size: clamp(2.2rem, 5vw, 3.2rem) !important; /* Ukuran yang ideal */
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* MENYATUKAN KEMBALI KATA AKSEN AGAR TIDAK JUMPING */
+.profile-page .section-title .headline-accent {
+  font-family: inherit !important;
+  font-style: inherit !important;
+  text-transform: inherit !important;
+  font-weight: inherit !important;
+  color: var(--accent-primary) !important; /* Memberi aksen warna lembut saja */
+}
+
+/* MEMPERBAIKI SUBTITLE AGAR MUDAH DIBACA (BUKAN ALL CAPS) */
+.profile-page .section-heading p {
+  text-transform: none !important; /* Ubah ke huruf normal */
+  letter-spacing: normal !important;
+  font-size: 1.4rem !important;
+  opacity: 0.9 !important;
+  font-family: "Arimo", sans-serif !important;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
